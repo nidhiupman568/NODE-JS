@@ -1,0 +1,289 @@
+### 1. What is Node.js?
+
+Node.js is a JavaScript runtime environment used to execute JavaScript code outside of a browser. It is commonly utilized to build the backend of applications and is known for its scalability.
+
+### 2. What is the difference between Node.js and JavaScript?
+
+JavaScript is a scripting language, whereas Node.js provides a runtime environment for executing JavaScript code on the server side.
+
+**Node.js vs JavaScript**:
+
+- **Node.js**: Server-side runtime environment, enables running JavaScript on the server, built on Chrome’s V8 engine, supports event-driven, non-blocking I/O, used for backend APIs, servers, and applications.
+- **JavaScript**: Client-side scripting language, primarily used for web development, runs in a web browser’s engine, limited to browser APIs, used for interactive web pages and client-side logic.
+
+### 3. Is Node.js single-threaded?
+
+Yes, Node.js is single-threaded by default. It employs an event-driven architecture and non-blocking I/O operations to efficiently handle multiple concurrent requests, enabling high performance and scalability.
+
+### 4. What kind of API function is supported by Node.js?
+
+Node.js supports two types of API functions:
+
+- **Synchronous**: Used for blocking code.
+- **Asynchronous**: Used for non-blocking code.
+
+### 5. What is the difference between Synchronous and Asynchronous functions?
+
+**Synchronous vs Asynchronous Functions**:
+
+- **Synchronous Functions**:
+  - **Execution Blocking**: Blocks execution until the task completes.
+  - **Completion**: Executes tasks sequentially.
+  - **Return Value**: Returns the result immediately after completion.
+  - **Error Handling**: Errors can be caught with try-catch blocks.
+  - **Usage**: Suitable for simple, sequential tasks.
+
+- **Asynchronous Functions**:
+  - **Execution Blocking**: Does not block execution.
+  - **Completion**: Initiates tasks and proceeds with other operations.
+  - **Return Value**: Typically returns a promise, callback, or uses async/await.
+  - **Error Handling**: Often involves callbacks, promises, or async/await.
+  - **Usage**: Ideal for I/O-bound operations and parallel processing.
+
+### 6. What is a module in Node.js?
+
+A module in Node.js is a block of code providing specific functionality that can be reused in other applications. Modules can be organized in single or multiple files and folders, enhancing code reusability and reducing complexity. Examples include `http`, `fs`, `os`, and `path`.
+
+### 7. What is npm and its advantages?
+
+npm (Node Package Manager) is the default package manager for Node.js. It helps developers discover, share, and reuse code packages. Advantages include dependency management, version control, a centralized repository, and seamless integration with Node.js projects.
+
+### 8. What is middleware?
+
+Middleware is a function that operates between the request and response cycle in a Node.js application. It is executed after the server receives a request and before the controller sends a response.
+
+### 9. How does Node.js handle concurrency even after being single-threaded?
+
+Node.js handles concurrency using asynchronous, non-blocking operations. It initiates multiple tasks and continues processing other tasks while waiting for the initial ones to finish, all within a single thread.
+
+### 10. What is control flow in Node.js?
+
+Control flow in Node.js refers to the sequence in which statements and functions are executed. It manages the execution order, handling asynchronous operations, callbacks, and error handling to ensure smooth program flow.
+
+### 11. What do you mean by event loop in Node.js?
+
+The event loop in Node.js is a mechanism that enables handling multiple asynchronous tasks concurrently within a single thread. It continuously listens for events and executes associated callback functions.
+
+### 12. What is the order in which control flow statements get executed?
+
+The execution order of control flow statements in Node.js is:
+
+1. Execution and queue handling.
+2. Collection of data and storing it.
+3. Handling concurrency.
+4. Executing the next lines of code.
+
+### 13. What are the main disadvantages of Node.js?
+
+**Main Disadvantages of Node.js**:
+
+- **Single-threaded Nature**: May not fully utilize multi-core CPUs.
+- **NoSQL Preference**: Relational databases like MySQL are less commonly used.
+- **Rapid API Changes**: Frequent updates can lead to instability and compatibility issues.
+
+### 14. What is REPL in Node.js?
+
+REPL in Node.js stands for Read, Evaluate, Print, and Loop. It is a computer environment similar to a shell, useful for writing and debugging code by executing code on the go.
+
+### 15. How to import a module in Node.js?
+
+Modules in Node.js are imported using the `require` function. The result returned by `require()` is stored in a variable, which is then used to invoke functions using dot notation.
+
+### 16. What is the difference between Node.js and AJAX?
+
+Node.js is a JavaScript runtime environment that runs on the server side, whereas AJAX is a client-side technique used to make asynchronous HTTP requests within a browser.
+
+### 17. What is package.json in Node.js?
+
+`package.json` is a metadata file in Node.js that contains project-specific information such as dependencies, scripts, version, author details, and other configurations required for managing and building the project.
+
+### 18. How to write "Hello World" using Node.js?
+
+```javascript
+const http = require('http');
+
+// Create a server object
+http.createServer(function (req, res) {
+    res.write('Hello World!');
+    res.end();
+}).listen(3000);
+```
+Run this program from the command line and see the output in the browser at `http://localhost:3000/`. This program prints "Hello World" in the browser when a request is sent to the server.
+
+### 19. What is the most popular Node.js framework used these days?
+
+The most popular Node.js framework is Express.js. It is highly scalable, efficient, and requires minimal code to create an application.
+
+### 20. What are promises in Node.js?
+
+Promises in Node.js are an advancement over callbacks. They are JavaScript objects used to handle asynchronous operations. Promises help avoid callback hell by providing a more readable and manageable way to handle asynchronous code.
+
+### 21. What is event-driven programming in Node.js?
+
+Event-driven programming in Node.js synchronizes the occurrence of multiple events, making the program simpler. The main components are:
+
+- **Callback Function (Event Handler)**: Called when an event is triggered.
+- **Event Loop**: Listens for event triggers and calls the corresponding event handler.
+
+### 22. What is buffer in Node.js?
+
+The Buffer class in Node.js is used to handle raw binary data. Buffers represent fixed-size chunks of memory allocated outside the V8 heap and allow working with binary data directly.
+
+### 23. What are streams in Node.js?
+
+Streams are data-handling methods used to read or write input sequentially. They handle reading/writing files or exchanging information efficiently. Examples include `http` requests and `process.stdout`.
+
+### 24. Explain the crypto module in Node.js.
+
+The crypto module in Node.js is used for encrypting, decrypting, or hashing data. It secures data by converting plain text into encrypted formats and decrypting it when necessary, adding a layer of authentication and security.
+
+### 25. What is callback hell?
+
+Callback hell occurs when nested callbacks create complex, hard-to-read code structures. Promises are used to overcome this issue, providing a more manageable way to handle asynchronous operations.
+
+### 26. Explain the use of timers module in Node.js.
+
+The Timers module in Node.js contains functions that allow executing code after a set period. It is a global module and includes methods such as `setTimeout()`, `setImmediate()`, and `setInterval()`.
+
+### 27. Difference between setImmediate() and process.nextTick() methods.
+
+- **process.nextTick()**: Adds a callback function at the start of the next event queue, before other events are processed.
+- **setImmediate()**: Executes a script immediately at the check phase of the next event queue.
+
+### 28. What is the difference between setTimeout() and setImmediate() method?
+
+- **setImmediate()**: Executes a script immediately.
+- **setTimeout()**: Executes a function after a specified period.
+
+### 29. What is the difference between spawn() and fork() method?
+
+Both methods create new child processes, but:
+
+- **spawn()**: Runs a new process from the command line.
+- **fork()**: Creates an instance of an existing process, allowing multiple workers to perform the same task.
+
+### 30. Explain the use of passport module in Node.js.
+
+The passport module in Node.js is used to add authentication features to web applications. It implements authentication measures, facilitating user sign-in operations.
+
+
+### 31. What is fork in Node.js?
+
+Fork is a method in Node.js used to create child processes. It helps handle increasing workloads by creating a new instance of the engine, enabling multiple processes to run the code.
+
+### 32. What are the three methods to avoid callback hell?
+
+The three methods to avoid callback hell are:
+
+- Using async/await()
+- Using promises
+- Using generators
+
+### 33. What is body-parser in Node.js?
+
+Body-parser is a Node.js middleware responsible for parsing incoming request bodies before handling them. It is an NPM module that processes data sent in HTTP requests.
+
+### 34. What is CORS in Node.js?
+
+CORS stands for “Cross-Origin Resource Sharing”. It is an HTTP-header based mechanism implemented by browsers that allows a server or an API to indicate any origins (different protocol, hostname, or port) from which unknown origins get permission to access and load resources. The `cors` package available in the npm registry is used to handle CORS errors in a Node.js application.
+
+### 35. Explain the tls module in Node.js?
+
+The tls module provides an implementation of the Transport Layer Security (TLS) and Secure Socket Layer (SSL) protocols built on top of OpenSSL. It helps establish a secure connection on the network.
+
+### 36. What is a cluster in Node.js?
+
+Due to Node.js's single-threaded nature, it handles memory more efficiently because no thread management is needed. To handle workload efficiently and take advantage of multi-core systems, cluster modules are created. They allow creating child processes that run simultaneously with a single parent process.
+
+### 37. Explain some of the cluster methods in Node.js
+
+- **Fork()**: Creates a new child process from the master. `isMaster` returns true if the current process is master, otherwise false.
+- **isWorker**: Returns true if the current process is a worker, otherwise false.
+- **process**: Returns the child process, which is global.
+- **send()**: Sends a message from worker to master or vice versa.
+- **kill()**: Kills the current worker.
+
+### 38. How to manage sessions in Node.js?
+
+Session management in Node.js can be done using the `express-session` module. It helps in saving data in key-value form. In this module, the session data is not saved in the cookie itself, just the session ID.
+
+### 39. Explain the types of streams in Node.js
+
+- **Readable stream**: Allows you to receive and read data in an ordered fashion without sending anything back. Example: `fs.createReadStream()` to read file contents.
+- **Writable stream**: Allows you to send data in an ordered fashion without receiving it back. Example: `fs.createWriteStream()` to write data to a file.
+- **Duplex stream**: Both readable and writable, allowing you to send and receive data together. Example: `net.Socket` as a TCP socket.
+- **Transform stream**: Used to modify or transform data as it is read, functioning as a duplex stream. Example: `zlib.createGzip` to compress data using gzip.
+
+### 40. How can we implement authentication and authorization in Node.js?
+
+Authentication verifies a user’s identity, while authorization determines what actions the user can perform. Packages like Passport and JWT are used to implement authentication and authorization.
+
+### 41. Explain the packages used for file uploading in Node.js?
+
+The package commonly used for file uploading in Node.js is Multer. This module facilitates uploading files to the server. While there are other modules available, Multer is particularly popular for handling multipart/form-data, which is often used for file uploads.
+
+### 42. Explain the difference between Node.js and server-side scripting languages like Python.
+
+- **Asynchronous Programming**: Node.js is optimal for asynchronous programming, while Python is not.
+- **Project Suitability**: Node.js is suitable for small projects needing less scripting; Python is better for larger projects.
+- **Memory-Intensive Activities**: Node.js is ideal for memory-intensive tasks, whereas Python is not.
+- **Web Application Focus**: Node.js excels in web applications and website development, whereas Python is versatile, supporting web applications, backend integration, numerical computations, machine learning, and network programming.
+- **Real-Time Applications**: Node.js is excellent for real-time web applications; Python is less suitable.
+- **Performance**: Node.js, leveraging Chrome’s V8 engine, offers faster performance. Python is slower in comparison.
+- **Error Handling and Debugging**: Python is superior in error handling and debugging, making these processes quicker and easier compared to Node.js.
+
+### 43. How to handle database connection in Node.js?
+
+To manage database connections in Node.js, we use drivers for MySQL and libraries like Mongoose for MongoDB. These libraries provide methods for connecting to the database and executing queries.
+
+### 44. How to read command line arguments in Node.js?
+
+Command-line arguments are read using the global `process` object in Node.js. 
+
+**Steps**:
+
+1. Save a file as `index.js` with the following code:
+   ```javascript
+   let arguments = process.argv; 
+   console.log(arguments);
+   ```
+2. Run the file using the command:
+   ```
+   node index.js
+   ```
+
+### 45. Explain the Node.js redis module.
+
+Redis is an open-source data structure store used as a database, cache, and message broker. It supports various data structures like strings, hashes, sets, sorted sets, bitmaps, indexes, and streams. Redis integration with Node.js improves efficiency by reducing cache size and is straightforward to implement.
+
+### 46. What is a web socket?
+
+Web Socket is a protocol that enables full-duplex communication, allowing simultaneous communication in both directions. It establishes a continuous connection between the client's browser and the server, enabling both to send messages at any time. This is in contrast to the traditional request/response model. Web Sockets are particularly useful for real-time web applications where the server needs to communicate with the client without being polled.
+
+### 47. Explain the util module in Node.js.
+
+The `util` module in Node.js provides access to various utility functions.
+
+- **OS Module**: Utilities based on the operating system.
+- **Path Module**: Handles and transforms file paths.
+- **DNS Module**: Provides name resolution functions and performs DNS lookups.
+- **Net Module**: Creates both clients and servers, providing an asynchronous network wrapper.
+
+### 48. How to handle environment variables in Node.js?
+
+Environment variables in Node.js are managed using `process.env`. Configuration and keys are specified in a `.env` file. To access these variables in the application, use `process.env.VARIABLE_NAME`. Install the `dotenv` package using the following command:
+```
+npm install dotenv
+```
+
+### 49. Explain DNS module in Node.js.
+
+The DNS module in Node.js is used for name resolution, converting domain names to IP addresses. It leverages the operating system’s name resolution functions and can perform actual DNS lookups, eliminating the need to memorize IP addresses.
+
+### 50. What are child processes in Node.js?
+
+Node.js typically allows single-threaded, non-blocking performance. To handle increased workloads, the `child_process` module can spawn child processes. These processes communicate using a built-in messaging system, enabling parallel processing.
+
+### 51. What is tracing in Node.js?
+
+Tracing in Node.js involves using tracing objects to enable and disable event tracing for a set of categories. Tracing objects are disabled by default and can be enabled using the `tracing.enable()` method. Categories can be accessed through `tracing.categories`.
